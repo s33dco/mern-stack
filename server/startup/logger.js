@@ -57,6 +57,7 @@ const logger = createLogger({
 
 		new transports.MongoDB({
 			handleExceptions: true,
+			silent: env === 'test', // no logging to console if running in test..
 			exitOnError: true,
 			db: loggingDB,
 			collection: 'logging',

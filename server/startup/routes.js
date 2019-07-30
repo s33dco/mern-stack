@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const config = require('config');
 const logger = require('./logger');
+const api = require('../routes/api');
 
 const initialize = app => {
 	const middlewares = [
@@ -14,13 +15,13 @@ const initialize = app => {
 
 	// define Routes
 
-	// app.use('/api/users', users);
+	app.use('/api', api);
 
 	// serve static assests in production
 	if (config.util.getEnv('NODE_ENV') === 'production') {
-		app.use(express.static('production'));
+		app.use(express.static('build'));
 		app.get('*', (req, res) => {
-			res.sendFile(path.resolve(__dirname, 'production', 'index.html'));
+			res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 		});
 	}
 };

@@ -17,7 +17,8 @@
 		"build": "cross-env NODE_ENV=production $npm_package_config_webpack_args --env=prod",
 		"start": "node server/server.js",
 		"dev:start": "nodemon server/server.js",
-		"runinprod": "concurrently \"yarn build\" \"yarn start\""
+		"runinprod": "concurrently \"cross-env NODE_ENV=production yarn build\" \" cross-env NODE_ENV=production yarn start\"",
+		"test": "jest --watchAll --verbose --coverage --runInBand"
 	},
 	"browserslist": {
 		"production": [
@@ -80,6 +81,7 @@
 		"eslint-plugin-prettier": "^3.1.0",
 		"eslint-plugin-react": "^7.14.3",
 		"html-webpack-plugin": "^3.2.0",
+		"jest": "^24.8.0",
 		"mini-css-extract-plugin": "^0.8.0",
 		"node-sass": "^4.12.0",
 		"nodemon": "^1.19.1",
@@ -90,6 +92,7 @@
 		"rimraf": "^2.6.3",
 		"sass-loader": "^7.1.0",
 		"style-loader": "^0.23.1",
+		"supertest": "^4.0.2",
 		"terser-webpack-plugin": "^1.3.0",
 		"webpack": "^4.38.0",
 		"webpack-bundle-analyzer": "^3.3.2",
