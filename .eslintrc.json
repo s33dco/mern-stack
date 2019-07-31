@@ -8,7 +8,7 @@
 		"jest": true
 	},
 	"extends": ["airbnb", "prettier", "prettier/react"],
-	"plugins": ["prettier", "react", "jsx-a11y"],
+	"plugins": ["prettier", "react", "jsx-a11y", "jest"],
 	"parser": "babel-eslint",
 	"rules": {
 		"prettier/prettier": [

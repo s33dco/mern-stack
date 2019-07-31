@@ -8,7 +8,7 @@ beforeEach(() => {
 	wrapper = shallow(<Loading />);
 });
 
-describe('Home component', () => {
+describe('Loading component', () => {
 	it('should render Loading component correctly', () => {
 		expect(wrapper).toMatchSnapshot();
 	});

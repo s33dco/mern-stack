@@ -8,7 +8,7 @@ beforeEach(() => {
 	wrapper = shallow(<Header />);
 });
 
-describe('Home component', () => {
+describe('Header component', () => {
 	it('should render Header component correctly', () => {
 		expect(wrapper).toMatchSnapshot();
 	});

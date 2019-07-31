@@ -8,7 +8,7 @@ beforeEach(() => {
 	wrapper = shallow(<Footer />);
 });
 
-describe('Home component', () => {
+describe('Footer component', () => {
 	it('should render Footer component correctly', () => {
 		expect(wrapper).toMatchSnapshot();
 	});

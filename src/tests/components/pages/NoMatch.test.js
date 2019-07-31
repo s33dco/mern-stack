@@ -8,7 +8,7 @@ beforeEach(() => {
 	wrapper = shallow(<NoMatch />);
 });
 
-describe('Home component', () => {
+describe('NoMatch component', () => {
 	it('should render NoMatch component correctly', () => {
 		expect(wrapper).toMatchSnapshot();
 	});

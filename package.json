@@ -18,7 +18,7 @@
 		"start": "node server/server.js",
 		"dev:start": "nodemon server/server.js",
 		"runinprod": "concurrently \"cross-env NODE_ENV=production yarn build\" \" cross-env NODE_ENV=production yarn start\"",
-		"test": "jest --watchAll --verbose --coverage --runInBand"
+		"test": "jest --watchAll --coverage --runInBand"
 	},
 	"browserslist": {
 		"production": [
@@ -80,6 +80,7 @@
 		"eslint-config-airbnb": "^17.1.1",
 		"eslint-config-prettier": "^6.0.0",
 		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jest": "^22.14.1",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-prettier": "^3.1.0",
 		"eslint-plugin-react": "^7.14.3",
